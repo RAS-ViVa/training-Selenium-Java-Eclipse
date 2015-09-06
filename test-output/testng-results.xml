@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="48842" started-at="2015-09-06T00:07:55Z" finished-at="2015-09-06T00:08:44Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="48842" started-at="2015-09-06T00:07:55Z" finished-at="2015-09-06T00:08:44Z">
+      <class name="viv.LoginTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:viv.LoginTest@44c2394]" name="init" is-config="true" duration-ms="10430" started-at="2015-09-05T20:07:55Z" finished-at="2015-09-05T20:08:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testLoginAdmin()[pri:0, instance:viv.LoginTest@44c2394]" name="testLoginAdmin" duration-ms="2654" started-at="2015-09-05T20:08:05Z" finished-at="2015-09-05T20:08:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginAdmin -->
+      </class> <!-- viv.LoginTest -->
+      <class name="viv.RemoveMovieTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:viv.RemoveMovieTest@6ffb110e]" name="init" is-config="true" duration-ms="5925" started-at="2015-09-05T20:08:19Z" finished-at="2015-09-05T20:08:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="RemoveMovieTest()[pri:0, instance:viv.RemoveMovieTest@6ffb110e]" name="RemoveMovieTest" duration-ms="4926" started-at="2015-09-05T20:08:24Z" finished-at="2015-09-05T20:08:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RemoveMovieTest -->
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:viv.RemoveMovieTest@6ffb110e]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-09-05T20:08:44Z" finished-at="2015-09-05T20:08:44Z">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[The driver does not belong to the current thread: FirefoxDriver: firefox on MAC (null)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: The driver does not belong to the current thread: FirefoxDriver: firefox on MAC (null)
+	at ru.stqa.selenium.factory.ThreadLocalSingletonStorage.dismissDriver(ThreadLocalSingletonStorage.java:69)
+	at ru.stqa.selenium.factory.WebDriverFactory.dismissDriver(WebDriverFactory.java:43)
+	at viv.TestBase.tearDown(TestBase.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:517)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:140)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:327)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- viv.RemoveMovieTest -->
+      <class name="viv.AddMovieTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:viv.AddMovieTest@13edc485]" name="init" is-config="true" duration-ms="6331" started-at="2015-09-05T20:08:29Z" finished-at="2015-09-05T20:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="AddMovieTestPositive()[pri:0, instance:viv.AddMovieTest@13edc485]" name="AddMovieTestPositive" duration-ms="7872" started-at="2015-09-05T20:08:36Z" finished-at="2015-09-05T20:08:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddMovieTestPositive -->
+      </class> <!-- viv.AddMovieTest -->
+      <class name="viv.AddMovieTestNegative">
+        <test-method status="PASS" signature="init()[pri:0, instance:viv.AddMovieTestNegative@384eb259]" name="init" is-config="true" duration-ms="6308" started-at="2015-09-05T20:08:08Z" finished-at="2015-09-05T20:08:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="AddMovieTestPositive()[pri:0, instance:viv.AddMovieTestNegative@384eb259]" name="AddMovieTestPositive" duration-ms="4277" started-at="2015-09-05T20:08:14Z" finished-at="2015-09-05T20:08:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddMovieTestPositive -->
+      </class> <!-- viv.AddMovieTestNegative -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
