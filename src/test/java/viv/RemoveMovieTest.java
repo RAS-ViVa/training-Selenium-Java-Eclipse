@@ -4,6 +4,9 @@ import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.testng.*;
 import org.testng.annotations.*;
+
+import com.thoughtworks.selenium.Wait;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
@@ -23,7 +26,13 @@ public class RemoveMovieTest extends TestBase {
     driver.findElement(By.name("password")).clear();
     driver.findElement(By.name("password")).sendKeys("admin");
     driver.findElement(By.name("submit")).click();
-    driver.findElement(By.partialLinkText("Test_Add_Movie XXX")).click();    
+    WebElement film = driver.findElement(By.xpath("/html/body/div[1]/div/div/section/div[3]/a[1]/div/div[2]"));
+    String filmName = film.getText();
+    film.click();
+    driver.findElement(By.linkText("Remove")).click();
+    Alert alert = driver.switchTo().alert();
+    alert.accept();
+    isElementNoPresent(By.partialLinkText(filmName));   
     driver.quit();
   }
 
@@ -36,6 +45,15 @@ public class RemoveMovieTest extends TestBase {
     }
   }
 
+  private boolean isElementNoPresent(By by) {
+	    try {
+	      driver.findElement(by);
+	      return false;
+	    } catch (NoSuchElementException e) {
+	      return true;
+	    }
+	  }
+  
   private String closeAlertAndGetItsText() {
     try {
       Alert alert = driver.switchTo().alert();

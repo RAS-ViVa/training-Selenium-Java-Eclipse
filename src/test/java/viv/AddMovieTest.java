@@ -32,7 +32,7 @@ public class AddMovieTest extends TestBase {
     driver.findElement(By.name("duration")).sendKeys("120");
     driver.findElement(By.name("submit")).click();
     driver.findElement(By.xpath("/html/body/div/div/header/div/nav/ul/li[1]/a")).click();
-    driver.findElement(By.partialLinkText("Test_Add_Movie XXX"));    
+    driver.findElement(By.partialLinkText("Test_Add_Movie XXX"));
     driver.quit();
   }
 
