@@ -1,22 +1,25 @@
 package viv;
 
 import java.util.regex.Pattern;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.testng.*;
 import org.testng.annotations.*;
+
+import com.thoughtworks.selenium.Wait;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.By;
 
-public class AddMovieTestNegative extends TestBase {
+public class SearchMovieTestPositive extends TestBase {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
   @Test
-  public void AddMovieTestNegative() throws Exception {
+  public void SearchMovieTestPositive() throws Exception {
 
     driver.get(baseUrl + "/php4dvd/");
     driver.findElement(By.id("username")).clear();
@@ -24,15 +27,19 @@ public class AddMovieTestNegative extends TestBase {
     driver.findElement(By.name("password")).clear();
     driver.findElement(By.name("password")).sendKeys("admin");
     driver.findElement(By.name("submit")).click();
-    driver.findElement(By.linkText("Add movie")).click();
-    driver.findElement(By.name("name")).clear();
-    driver.findElement(By.name("name")).sendKeys("Test_Add_Movie XXX");
-    driver.findElement(By.name("year")).clear();
-    driver.findElement(By.name("year")).sendKeys("");
-    driver.findElement(By.name("duration")).clear();
-    driver.findElement(By.name("duration")).sendKeys("120");
-    driver.findElement(By.name("submit")).click();
-    driver.findElement(By.className("error"));    
+    WebElement film = driver.findElement(By.xpath("/html/body/div[1]/div/div/section/div[3]/a[1]/div/div[2]"));
+    String filmName = film.getText();
+    List<WebElement> FilmsCollection = driver.findElements(By.className("movie_box"));
+    int totalFilmsCollection = FilmsCollection.size();
+    Assert.assertTrue(0 < totalFilmsCollection); 
+    driver.findElement(By.id("q")).clear();
+    driver.findElement(By.id("q")).sendKeys(filmName);  
+    driver.findElement(By.id("q")).sendKeys(Keys.RETURN);
+    isElementPresent(By.partialLinkText(filmName));
+    List<WebElement> FilmsSearch = driver.findElements(By.className("movie_box"));
+    int totalFilmsSearch = FilmsSearch.size();
+    Assert.assertTrue(0 < totalFilmsSearch);
+    Assert.assertTrue(totalFilmsSearch < totalFilmsCollection);    
     driver.quit();
   }
 
@@ -45,6 +52,15 @@ public class AddMovieTestNegative extends TestBase {
     }
   }
 
+  private boolean isElementNoPresent(By by) {
+	    try {
+	      driver.findElement(by);
+	      return false;
+	    } catch (NoSuchElementException e) {
+	      return true;
+	    }
+	  }
+  
   private String closeAlertAndGetItsText() {
     try {
       Alert alert = driver.switchTo().alert();

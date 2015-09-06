@@ -3,11 +3,9 @@
 <suite name="Tests" verbose="5" data-provider-thread-count="1">
 	<test name="Test1">
 		<parameter name="path" value="/"/>
-		<classes>
-		    <class name="viv.LoginTest"/>
-		    <class name="viv.AddMovieTest"/>
-		    <class name="viv.AddMovieTestNegative"/>		    
-		    <class name="viv.RemoveMovieTest"/>		    
+		<classes>			
+		    <class name="viv.SearchMovieTestPositive"/>			    
+		    <class name="viv.SearchMovieTestNegative"/>		        
 		</classes>
 	</test>  
 </suite>
