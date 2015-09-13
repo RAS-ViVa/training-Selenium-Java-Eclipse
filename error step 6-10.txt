@@ -1,0 +1,262 @@
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+...
+... TestNG 6.8beta 20120825_1010 by C�dric Beust (cedric@beust.com)
+...
+
+org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+":1442185506000}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"/Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"40.0.3","st":1440751355000,"mt":1440751324000}},"app-system-local":{"web2pdfextension@web2pdf.adobedotcom":{"d":"/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom","e":false,"v":"1.2","st":1437311342000,"mt":1435349773000}}}
+1442185512205	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1442185512211	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1442185512214	addons.xpi	DEBUG	getInstallState changed: false, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"/var/folders/bl/8rnl741j2hb9649gwpsy9l300000gn/T/anonymous4163824165128512771webdriver-profile/extensions/fxdriver@googlecode.com","e":true,"v":"2.43.1","st":1442185506000,"mt":1442185506000}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"/Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"40.0.3","st":1440751355000,"mt":1440751324000}},"app-system-local":{"web2pdfextension@web2pdf.adobedotcom":{"d":"/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom","e":false,"v":"1.2","st":1437311342000,"mt":1435349773000}}}
+1442185512216	addons.xpi	DEBUG	No changes found
+1442185512224	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1442185512225	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1442185512225	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1442185512225	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1442185512226	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1442185512226	addons.manager	DEBUG	Starting provider: GMPProvider
+1442185512232	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1442185512233	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1442185512233	addons.manager	DEBUG	Starting provider: PluginProvider
+1442185512233	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1442185512234	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1442185512234	addons.manager	DEBUG	Completed startup sequence
+1442185512286	addons.xpi-utils	DEBUG	Starting async load of XPI database /var/folders/bl/8rnl741j2hb9649gwpsy9l300000gn/T/anonymous4163824165128512771webdriver-profile/extensions.json
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1442185512684	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1442185512684	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1442185512685	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1442185513454	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1442185513454	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1442185513457	addons.xpi-utils	DEBUG	Successfully read XPI database
+1442185513658	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1442185513658	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1442185513659	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+JavaScript error: file:///var/folders/bl/8rnl741j2hb9649gwpsy9l300000gn/T/anonymous4163824165128512771webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js, line 11464: TypeError: this.server_ is undefined
+JavaScript error: chrome://fxdriver/content/server.js, line 38: NS_ERROR_XPC_CI_RETURNED_FAILURE: Component returned failure code: 0x80570015 (NS_ERROR_XPC_CI_RETURNED_FAILURE) [nsIJSCID.createInstance]
+JavaScript error: https://self-repair.mozilla.org/en-US/repair/, line 7: ReferenceError: geoip_country_code is not defined
+JavaScript error: https://self-repair.mozilla.org/en-US/repair/, line 7: ReferenceError: geoip_country_code is not defined
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:114)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:191)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:186)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:182)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:99)
+	at ru.st.selenium.webdriver.WebDriverFactory.getInstance(WebDriverFactory.java:159)
+	at ru.st.selenium.webdriver.WebDriverFactory.getInstance(WebDriverFactory.java:74)
+	at ru.st.selenium.applogic2.ApplicationManager2.<init>(ApplicationManager2.java:34)
+	at ru.st.selenium.pages.TestBase.init(TestBase.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 5, Time elapsed: 53.48 sec <<< FAILURE!
+init(ru.st.selenium.LoginTest)  Time elapsed: 52.871 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+":1442185506000}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"/Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"40.0.3","st":1440751355000,"mt":1440751324000}},"app-system-local":{"web2pdfextension@web2pdf.adobedotcom":{"d":"/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom","e":false,"v":"1.2","st":1437311342000,"mt":1435349773000}}}
+1442185512205	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1442185512211	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1442185512214	addons.xpi	DEBUG	getInstallState changed: false, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"/var/folders/bl/8rnl741j2hb9649gwpsy9l300000gn/T/anonymous4163824165128512771webdriver-profile/extensions/fxdriver@googlecode.com","e":true,"v":"2.43.1","st":1442185506000,"mt":1442185506000}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"/Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"40.0.3","st":1440751355000,"mt":1440751324000}},"app-system-local":{"web2pdfextension@web2pdf.adobedotcom":{"d":"/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom","e":false,"v":"1.2","st":1437311342000,"mt":1435349773000}}}
+1442185512216	addons.xpi	DEBUG	No changes found
+1442185512224	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1442185512225	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1442185512225	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1442185512225	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1442185512226	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1442185512226	addons.manager	DEBUG	Starting provider: GMPProvider
+1442185512232	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1442185512233	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1442185512233	addons.manager	DEBUG	Starting provider: PluginProvider
+1442185512233	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1442185512234	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1442185512234	addons.manager	DEBUG	Completed startup sequence
+1442185512286	addons.xpi-utils	DEBUG	Starting async load of XPI database /var/folders/bl/8rnl741j2hb9649gwpsy9l300000gn/T/anonymous4163824165128512771webdriver-profile/extensions.json
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1442185512684	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1442185512684	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1442185512685	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1442185513454	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1442185513454	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1442185513457	addons.xpi-utils	DEBUG	Successfully read XPI database
+1442185513658	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1442185513658	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1442185513659	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+JavaScript error: file:///var/folders/bl/8rnl741j2hb9649gwpsy9l300000gn/T/anonymous4163824165128512771webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js, line 11464: TypeError: this.server_ is undefined
+JavaScript error: chrome://fxdriver/content/server.js, line 38: NS_ERROR_XPC_CI_RETURNED_FAILURE: Component returned failure code: 0x80570015 (NS_ERROR_XPC_CI_RETURNED_FAILURE) [nsIJSCID.createInstance]
+JavaScript error: https://self-repair.mozilla.org/en-US/repair/, line 7: ReferenceError: geoip_country_code is not defined
+JavaScript error: https://self-repair.mozilla.org/en-US/repair/, line 7: ReferenceError: geoip_country_code is not defined
+Build info: version: '2.43.1', revision: '5163bceef1bc36d43f3dc0b83c88998168a363a0', time: '2014-09-10 09:43:55'
+System info: host: 'vivmy.local', ip: '10.211.55.2', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.7.0_79'
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:114)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:191)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:186)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:182)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:99)
+	at ru.st.selenium.webdriver.WebDriverFactory.getInstance(WebDriverFactory.java:159)
+	at ru.st.selenium.webdriver.WebDriverFactory.getInstance(WebDriverFactory.java:74)
+	at ru.st.selenium.applogic2.ApplicationManager2.<init>(ApplicationManager2.java:34)
+	at ru.st.selenium.pages.TestBase.init(TestBase.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+":1442185506000}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"/Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"40.0.3","st":1440751355000,"mt":1440751324000}},"app-system-local":{"web2pdfextension@web2pdf.adobedotcom":{"d":"/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom","e":false,"v":"1.2","st":1437311342000,"mt":1435349773000}}}
+1442185512205	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1442185512211	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1442185512214	addons.xpi	DEBUG	getInstallState changed: false, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"/var/folders/bl/8rnl741j2hb9649gwpsy9l300000gn/T/anonymous4163824165128512771webdriver-profile/extensions/fxdriver@googlecode.com","e":true,"v":"2.43.1","st":1442185506000,"mt":1442185506000}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"/Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"40.0.3","st":1440751355000,"mt":1440751324000}},"app-system-local":{"web2pdfextension@web2pdf.adobedotcom":{"d":"/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom","e":false,"v":"1.2","st":1437311342000,"mt":1435349773000}}}
+1442185512216	addons.xpi	DEBUG	No changes found
+1442185512224	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1442185512225	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1442185512225	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1442185512225	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1442185512226	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1442185512226	addons.manager	DEBUG	Starting provider: GMPProvider
+1442185512232	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1442185512233	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1442185512233	addons.manager	DEBUG	Starting provider: PluginProvider
+1442185512233	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1442185512234	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1442185512234	addons.manager	DEBUG	Completed startup sequence
+1442185512286	addons.xpi-utils	DEBUG	Starting async load of XPI database /var/folders/bl/8rnl741j2hb9649gwpsy9l300000gn/T/anonymous4163824165128512771webdriver-profile/extensions.json
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1442185512684	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1442185512684	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1442185512685	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1442185513454	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1442185513454	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1442185513457	addons.xpi-utils	DEBUG	Successfully read XPI database
+1442185513658	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1442185513658	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1442185513659	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+JavaScript error: file:///var/folders/bl/8rnl741j2hb9649gwpsy9l300000gn/T/anonymous4163824165128512771webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js, line 11464: TypeError: this.server_ is undefined
+JavaScript error: chrome://fxdriver/content/server.js, line 38: NS_ERROR_XPC_CI_RETURNED_FAILURE: Component returned failure code: 0x80570015 (NS_ERROR_XPC_CI_RETURNED_FAILURE) [nsIJSCID.createInstance]
+JavaScript error: https://self-repair.mozilla.org/en-US/repair/, line 7: ReferenceError: geoip_country_code is not defined
+JavaScript error: https://self-repair.mozilla.org/en-US/repair/, line 7: ReferenceError: geoip_country_code is not defined
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	... 43 more
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+":1442185506000}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"/Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"40.0.3","st":1440751355000,"mt":1440751324000}},"app-system-local":{"web2pdfextension@web2pdf.adobedotcom":{"d":"/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom","e":false,"v":"1.2","st":1437311342000,"mt":1435349773000}}}
+1442185512205	addons.xpi	DEBUG	getModTime: Recursive scan of fxdriver@googlecode.com
+1442185512211	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1442185512214	addons.xpi	DEBUG	getInstallState changed: false, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"/var/folders/bl/8rnl741j2hb9649gwpsy9l300000gn/T/anonymous4163824165128512771webdriver-profile/extensions/fxdriver@googlecode.com","e":true,"v":"2.43.1","st":1442185506000,"mt":1442185506000}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"/Applications/Firefox.app/Contents/Resources/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"40.0.3","st":1440751355000,"mt":1440751324000}},"app-system-local":{"web2pdfextension@web2pdf.adobedotcom":{"d":"/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/web2pdfextension@web2pdf.adobedotcom","e":false,"v":"1.2","st":1437311342000,"mt":1435349773000}}}
+1442185512216	addons.xpi	DEBUG	No changes found
+1442185512224	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1442185512225	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1442185512225	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1442185512225	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1442185512226	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1442185512226	addons.manager	DEBUG	Starting provider: GMPProvider
+1442185512232	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1442185512233	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1442185512233	addons.manager	DEBUG	Starting provider: PluginProvider
+1442185512233	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1442185512234	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1442185512234	addons.manager	DEBUG	Completed startup sequence
+1442185512286	addons.xpi-utils	DEBUG	Starting async load of XPI database /var/folders/bl/8rnl741j2hb9649gwpsy9l300000gn/T/anonymous4163824165128512771webdriver-profile/extensions.json
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1442185512684	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1442185512684	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1442185512685	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1442185513454	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1442185513454	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1442185513457	addons.xpi-utils	DEBUG	Successfully read XPI database
+1442185513658	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1442185513658	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1442185513659	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+JavaScript error: file:///var/folders/bl/8rnl741j2hb9649gwpsy9l300000gn/T/anonymous4163824165128512771webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js, line 11464: TypeError: this.server_ is undefined
+JavaScript error: chrome://fxdriver/content/server.js, line 38: NS_ERROR_XPC_CI_RETURNED_FAILURE: Component returned failure code: 0x80570015 (NS_ERROR_XPC_CI_RETURNED_FAILURE) [nsIJSCID.createInstance]
+JavaScript error: https://self-repair.mozilla.org/en-US/repair/, line 7: ReferenceError: geoip_country_code is not defined
+JavaScript error: https://self-repair.mozilla.org/en-US/repair/, line 7: ReferenceError: geoip_country_code is not defined
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	... 43 more
+
+
+Results :
+
+Failed tests:   init(ru.st.selenium.LoginTest): Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: (..)
+
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 5
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:15 min
+[INFO] Finished at: 2015-09-13T19:05:57-04:00
+[INFO] Final Memory: 25M/361M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project selenium_java_training: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/feu/Downloads/QA/Testing/Selenium-Java/selenium-java-training-pom-hw5/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

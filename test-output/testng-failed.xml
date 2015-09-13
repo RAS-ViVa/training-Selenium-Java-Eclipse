@@ -5,7 +5,6 @@
     <classes>
       <class name="viv.LoginTest">
         <methods>
-          <include name="tearDown"/>
           <include name="testLoginOK"/>
           <include name="init"/>
           <include name="testLoginFailed"/>

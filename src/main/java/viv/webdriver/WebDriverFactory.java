@@ -11,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -171,15 +172,15 @@ public class WebDriverFactory {
 		} else if (SAFARI.equals(browser)) {
 			webDriver = new SafariDriver();
 
-		} else if (IPHONE.equals(browser)) {
-			try {
-				webDriver = new IPhoneDriver();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+		//} else if (IPHONE.equals(browser)) {
+		//	try {
+		//		webDriver = new WebDriver();
+		//	} catch (Exception e) {
+		//		e.printStackTrace();
+		//	}
 
-		} else if (ANDROID.equals(browser)) {
-			webDriver = new AndroidDriver();
+		//} else if (ANDROID.equals(browser)) {
+		//	webDriver = new AndroidDriver();
 
 		} else {
 

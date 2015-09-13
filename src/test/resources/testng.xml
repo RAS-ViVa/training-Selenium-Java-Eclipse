@@ -4,8 +4,7 @@
 	<test name="Test1">
 		<parameter name="path" value="/"/>
 		<classes>			
-		    <class name="viv.SearchMovieTestPositive"/>			    
-		    <class name="viv.SearchMovieTestNegative"/>		        
+		    <class name="viv.LoginTest"/>			            
 		</classes>
 	</test>  
 </suite>
