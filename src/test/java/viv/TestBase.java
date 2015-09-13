@@ -2,52 +2,81 @@ package viv;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 
-import ru.stqa.selenium.factory.WebDriverFactory;
-
+import viv.applogic.ApplicationManager;
+import viv.applogic0.ApplicationManager0;
+import viv.util.Browser;
 import viv.util.PropertyLoader;
+import viv.webdriver.WebDriverFactory;
 
-/**
- * Base class for all the TestNG-based test classes
+/*
+ * Base class for all the test classes
+ * 
+ * @author Sebastiano Armeli-Battana
  */
+
 public class TestBase {
+	private static final String SCREENSHOT_FOLDER = "target/screenshots/";
+	private static final String SCREENSHOT_FORMAT = ".png";
+
 	protected WebDriver driver;
 
 	protected String gridHubUrl;
 
 	protected String baseUrl;
 
+	protected Browser browser;
+	
+	protected ApplicationManager app;
+
 	@BeforeClass
 	public void init() {
 		baseUrl = PropertyLoader.loadProperty("site.url");
 		gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
 
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setBrowserName(PropertyLoader.loadProperty("browser.name"));
-		capabilities.setVersion(PropertyLoader.loadProperty("browser.version"));
-		String platform = PropertyLoader.loadProperty("browser.platform");
-		if (!(null == platform || "".equals(platform))) {
-			capabilities.setPlatform(Platform.valueOf(PropertyLoader.loadProperty("browser.platform")));
-		}
+		browser = new Browser();
+		browser.setName(PropertyLoader.loadProperty("browser.name"));
+		browser.setVersion(PropertyLoader.loadProperty("browser.version"));
+		browser.setPlatform(PropertyLoader.loadProperty("browser.platform"));
 
-		if (!(null == gridHubUrl || "".equals(gridHubUrl))) {
-			driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
-		} else {
-			driver = WebDriverFactory.getDriver(capabilities);
-		}
+		String username = PropertyLoader.loadProperty("user.username");
+		String password = PropertyLoader.loadProperty("user.password");
+		
+		driver = WebDriverFactory.getInstance(gridHubUrl, browser, username,
+				password);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		app = new ApplicationManager0();
 	}
 
 	@AfterSuite(alwaysRun = true)
 	public void tearDown() {
 		if (driver != null) {
-			WebDriverFactory.dismissDriver(driver);
+			driver.quit();
 		}
 	}
+
+//	@AfterMethod
+//	public void setScreenshot(ITestResult result) {
+//		if (!result.isSuccess()) {
+//			try {
+//				WebDriver returned = new Augmenter().augment(driver);
+//				if (returned != null) {
+//					File f = ((TakesScreenshot) returned)
+//							.getScreenshotAs(OutputType.FILE);
+//					try {
+//						FileUtils.copyFile(f, new File(SCREENSHOT_FOLDER
+//								+ result.getName() + SCREENSHOT_FORMAT));
+//					} catch (IOException e) {
+//						e.printStackTrace();
+//					}
+//				}
+//			} catch (ScreenshotException se) {
+//				se.printStackTrace();
+//			}
+//		}
+//	}
 }
